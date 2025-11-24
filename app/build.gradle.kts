@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
 }
 
 android {
@@ -23,7 +24,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -56,4 +57,16 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-moshi:3.0.0")
+    implementation("com.squareup.moshi:moshi:1.15.2")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.2")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.3.2")
+    implementation("androidx.room:room-runtime:2.8.4")
+    implementation("androidx.room:room-ktx:2.8.4")
+    kapt("androidx.room:room-compiler:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.10.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+    implementation("io.insert-koin:koin-android:4.1.1")
 }
