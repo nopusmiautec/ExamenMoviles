@@ -1,0 +1,16 @@
+<!--- Provide a general summary of your changes in the Title above -->
+
+## Description
+<!--- Please explain how this functionality can be accessed -->
+
+## Types of changes:
+<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
+- [ ] Bug fix (non-breaking change which fixes an issue).
+- [ ] New feature (non-breaking change which adds functionality).
+- [ ] Documentation.
+   
+## Checklist:
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+- [ ] `CHANGELOG.md` is updated.
+- [ ] It has been test and it passes.
+- [ ] Code documentation is complete.
