@@ -1,4 +1,4 @@
-package com.app.examenapp.ui.theme
+package com.app.examenapp.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
