@@ -2,6 +2,7 @@
 
 ### Added
 
+ - Added MVVM + Clean Architecture to the project
  - Added basic configuration for the github repositories
  - Added Pull Request template
  - Added CHANGELOG
