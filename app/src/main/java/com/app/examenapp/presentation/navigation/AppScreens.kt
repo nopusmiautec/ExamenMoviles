@@ -6,4 +6,6 @@ sealed class AppScreens(
     object Welcome : AppScreens("welcome_screen")
 
     object Home : AppScreens("home_screen")
+
+    object Characters : AppScreens("characters_screen")
 }

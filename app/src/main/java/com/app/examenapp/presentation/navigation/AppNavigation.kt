@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.app.examenapp.presentation.screens.HomeScreen
 import com.app.examenapp.presentation.screens.WelcomeScreen
+import com.app.examenapp.presentation.screens.characters.CharactersScreen
 
 @Suppress("ktlint:standard:function-naming")
 @Composable
@@ -27,7 +28,15 @@ fun AppNavigation() {
         }
 
         composable(route = AppScreens.Home.route) {
-            HomeScreen()
+            HomeScreen(
+                onNavigateToCharacters = {
+                    navController.navigate(AppScreens.Characters.route)
+                },
+            )
+        }
+
+        composable(route = AppScreens.Characters.route) {
+            CharactersScreen()
         }
     }
 }
