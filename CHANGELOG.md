@@ -1,5 +1,8 @@
 ## [0.1.0] - 27/11/2025
 
+### Fixed
+ - Fixed views of Sudoku app
+
 ### Added
 
  - Added Sudoku app
