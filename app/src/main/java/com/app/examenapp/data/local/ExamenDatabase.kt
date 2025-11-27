@@ -2,13 +2,13 @@ package com.app.examenapp.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.app.examenapp.data.local.dao.CharacterDao
-import com.app.examenapp.data.local.entity.CharacterEntity
+import com.app.examenapp.data.local.dao.SudokuDao
+import com.app.examenapp.data.local.entity.SudokuEntity
 
 @Database(
-    entities = [CharacterEntity::class],
-    version = 1,
+    entities = [SudokuEntity::class],
+    version = 2,
 )
 abstract class ExamenDatabase : RoomDatabase() {
-    abstract fun characterDao(): CharacterDao
+    abstract fun sudokuDao(): SudokuDao
 }
