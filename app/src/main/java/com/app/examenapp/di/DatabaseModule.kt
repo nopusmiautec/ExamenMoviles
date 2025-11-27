@@ -3,7 +3,7 @@ package com.app.examenapp.di
 import android.content.Context
 import androidx.room.Room
 import com.app.examenapp.data.local.ExamenDatabase
-import com.app.examenapp.data.local.dao.CharacterDao
+import com.app.examenapp.data.local.dao.SudokuDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,14 +18,18 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(
         @ApplicationContext context: Context,
-    ): ExamenDatabase =
-        Room
-            .databaseBuilder(
-                context,
-                ExamenDatabase::class.java,
-                "examen_db",
-            ).build()
+    ): ExamenDatabase {
+        return Room.databaseBuilder(
+            context,
+            ExamenDatabase::class.java,
+            "examen_sudoku_db"
+        )
+            .fallbackToDestructiveMigration()
+            .build()
+    }
 
     @Provides
-    fun provideCharacterDao(database: ExamenDatabase): CharacterDao = database.characterDao()
+    fun provideSudokuDao(database: ExamenDatabase): SudokuDao {
+        return database.sudokuDao()
+    }
 }
