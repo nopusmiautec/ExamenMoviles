@@ -42,7 +42,8 @@ fun AppNavigation() {
             MenuScreen(
                 onNavigateToGame = { diff, size, isNew ->
                     navController.navigate(AppScreens.Game.createRoute(diff, size, isNew))
-                }
+                },
+                onNavigateBack = { navController.popBackStack() },
             )
         }
 
