@@ -2,6 +2,7 @@
 
 ### Fixed
  - Fixed views of Sudoku app
+ - Fixed scroll issue for vertical views for the sudoku views
 
 ### Added
 
