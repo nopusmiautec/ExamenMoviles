@@ -1,7 +1,7 @@
 package com.app.examenapp.di
 
-import com.app.examenapp.data.repository.CharacterRepositoryImpl
-import com.app.examenapp.domain.repository.CharacterRepository
+import com.app.examenapp.data.repository.SudokuRepositoryImpl
+import com.app.examenapp.domain.repository.SudokuRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -15,5 +15,7 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindCharacterRepository(characterRepositoryImpl: CharacterRepositoryImpl): CharacterRepository
+    abstract fun bindSudokuRepository(
+        sudokuRepositoryImpl: SudokuRepositoryImpl
+    ): SudokuRepository
 }

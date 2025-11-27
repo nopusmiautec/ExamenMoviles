@@ -69,8 +69,8 @@ fun HomeScreen(onNavigateToCharacters: () -> Unit) {
             Spacer(modifier = Modifier.height(30.dp))
 
             ModuleCard(
-                title = "Personajes API",
-                description = "Lista de Rick and Morty con cache.",
+                title = "Sudoku API",
+                description = "Sudoku!!!!!!.",
                 icon = Icons.Default.Person,
                 onClick = onNavigateToCharacters,
             )
