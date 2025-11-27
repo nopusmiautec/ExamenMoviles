@@ -1,6 +1,8 @@
 package com.app.examenapp.presentation.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
@@ -15,6 +17,7 @@ fun MenuScreen(
     onNavigateToGame: (difficulty: String, size: Int, isNew: Boolean) -> Unit,
     onNavigateBack: () -> Unit
 ) {
+    val scrollState = rememberScrollState()
     var selectedSize by remember { mutableIntStateOf(9) }
     var selectedDiff by remember { mutableStateOf("easy") }
 
@@ -31,7 +34,7 @@ fun MenuScreen(
         }
     ) { padding ->
         Column(
-            modifier = Modifier.fillMaxSize().padding(padding).padding(16.dp),
+            modifier = Modifier.fillMaxSize().padding(padding).padding(16.dp).verticalScroll(scrollState),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text("Tamaño")
