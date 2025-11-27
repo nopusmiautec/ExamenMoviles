@@ -96,4 +96,5 @@ dependencies {
 
     // Material Pull to refresh
     implementation(libs.androidx.material)
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 }
