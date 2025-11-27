@@ -36,6 +36,8 @@ fun MenuScreen(
         ) {
             Text("Tamaño")
             Row {
+                FilterChip(selected = selectedSize == 4, onClick = { selectedSize = 4 }, label = { Text("4x4") })
+                Spacer(modifier = Modifier.width(8.dp))
                 FilterChip(selected = selectedSize == 9, onClick = { selectedSize = 9 }, label = { Text("9x9") })
             }
 
@@ -46,6 +48,8 @@ fun MenuScreen(
                 FilterChip(selected = selectedDiff == "easy", onClick = { selectedDiff = "easy" }, label = { Text("Fácil") })
                 Spacer(modifier = Modifier.width(8.dp))
                 FilterChip(selected = selectedDiff == "medium", onClick = { selectedDiff = "medium" }, label = { Text("Medio") })
+                Spacer(modifier = Modifier.width(8.dp))
+                FilterChip(selected = selectedDiff == "hard", onClick = { selectedDiff = "hard" }, label = { Text("Dificil") })
             }
 
             Spacer(modifier = Modifier.height(32.dp))
